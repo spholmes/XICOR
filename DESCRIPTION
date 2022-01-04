@@ -1,0 +1,21 @@
+Package: XICOR
+Type: Package
+Title: Association Measurement Through Cross Rank Increments
+Version: 0.3.4
+Author: Susan Holmes [aut,cre], Sourav Chatterjee [aut] 
+Maintainer: Susan Holmes <sp.holmes@gmail.com>
+Description: Computes robust association measures that do not 
+    presuppose linearity. The xi correlation (xicor) is based
+    on cross correlation between ranked increments.
+    The reference for the methods implemented here is 
+    Chatterjee, Sourav (2020) <arXiv:1909.10140>
+    This package includes the Galton peas example.
+Depends: R (>= 3.5.0)
+License: GPL-3
+Date: 2020-05-25
+Encoding: UTF-8
+Imports: psychTools, stats
+Suggests: testthat (>= 2.1.0), ggplot2
+RoxygenNote: 7.1.0
+NeedsCompilation: no
+Packaged: 2022-01-03 03:54:59 UTC; susanholmes
