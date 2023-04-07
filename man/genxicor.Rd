@@ -49,6 +49,25 @@ relevant for xicor can be specified, such as pvalue.
 \note{
 This version does not use a seed as argument, if reproducibility is an issue, set a seed before calling the function.
 }
+\examples{
+
+example_joint_calc = function(n,x=runif(n),y=runif(n),ep=runif(n)) {
+u = (x + y + ep) \%\% 1
+v = ((x + y)/2 + ep) \%\% 1
+w = (4*x/3 + 2*y/3 + ep) \%\% 1
+z = (2*x/3 + y/3 + ep) \%\% 1
+q = cbind(u,v,w,z)
+p = cbind(x,y)
+c1 = genxicor(u, p)
+c2 = genxicor(v, p)
+c3 = genxicor(w, p)
+c4 = genxicor(z, p)
+c5 = genxicor(q, p)
+return(list(marg1 = c1$xi, marg2 = c2$xi, marg3 = c3$xi, marg4 = c4$xi, joint = c5$xi, p1 = c1$pval, p2 = c2$pval, p3 = c3$pval, p4 = c4$pval, p5 = c5$pval))
+}
+result1 <- example_joint_calc(10,xtest,ytest,ep))
+
+}
 \references{
 Chatterjee, S. (2022) <arXiv:2211.04702>
 }
