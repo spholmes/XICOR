@@ -16,6 +16,6 @@ Date: 2020-05-25
 Encoding: UTF-8
 Imports: psychTools, stats
 Suggests: testthat (>= 2.1.0), ggplot2
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.3
 NeedsCompilation: no
 Packaged: 2022-01-03 03:54:59 UTC; susanholmes

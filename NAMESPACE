@@ -3,6 +3,7 @@
 export(FRpredcor)
 export(FRpredcorhalf)
 export(calculateXI)
+export(genxicor)
 export(xicor)
 importFrom(stats,complete.cases)
 importFrom(stats,pnorm)

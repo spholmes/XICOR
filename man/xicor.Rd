@@ -58,7 +58,9 @@ it can be used to test independence using a Monte Carlo permutation test or
 through an asymptotic approximation test.
 }
 \note{
-Dataset peas no longer available in psych, using psychTools.
+Dataset peas no longer available in psych, we are now using psychTools.
+
+This version does not use a seed as argument, if reproducibility is an issue, set a seed before calling the function.
 }
 \examples{
 
