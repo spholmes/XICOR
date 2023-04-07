@@ -14,26 +14,17 @@
 #' @aliases genxicor
 #' @param xmat Matrix of numeric values in the first argument.
 #' @param ymat Matrix of numeric values in the second argument.
-#' @param pvalue Whether or not to return the p-value of rejecting
-#' independence, if TRUE the function also returns the standard deviation of
-#' xi.
-#' 
-#' @param method If method = "asymptotic" the function returns P-values
-#' computed by the asymptotic theory. If method = "permutation", a permutation
-#' test with nperm permutations is employed to estimate the P-value. Usually,
-#' there is no need for the permutation test. The asymptotic theory is good
-#' enough.
-#' @param nperm In the case of a permutation test, \code{nperm} is the number
-#' of permutations to do.
-#' @return In the case pvalue=FALSE, function returns the value of the genxi
-#' coefficient.
-#' In the case pvalue=TRUE is chosen, the function returns a list:
+
+#' @return Function returns the value of the genxi coefficient.
+#' Since by default the option pvalue=TRUE is chosen, the function 
+#' returns a list:
 #' \describe{\item{xi}{The
 #' value of the xi coefficient.}
 #' \item{sd}{The standard deviation.}
 #' \item{pval}{The test p-value.}
 #' }
 #' @note This version does not use a seed as argument, if reproducibility is an issue, set a seed before calling the function.
+#' @note The p-value of rejecting independence is set to TRUE.
 #' @author Sourav Chatterjee, Susan Holmes
 #' @export
 #' @references Chatterjee, S. (2022) <arXiv:2211.04702>
@@ -52,9 +43,11 @@
 #' c3 = genxicor(w, p)
 #' c4 = genxicor(z, p)
 #' c5 = genxicor(q, p)
-#' return(list(marg1 = c1$xi, marg2 = c2$xi, marg3 = c3$xi, marg4 = c4$xi, joint = c5$xi, p1 = c1$pval, p2 = c2$pval, p3 = c3$pval, p4 = c4$pval, p5 = c5$pval))
+#' return(list(marg1 = c1$xi, marg2 = c2$xi, marg3 = c3$xi, 
+#' marg4 = c4$xi, joint = c5$xi, p1 = c1$pval, p2 = c2$pval, p3 = c3$pval,
+#' p4 = c4$pval, p5 = c5$pval))
 #' }
-#' result1 <- example_joint_calc(10,xtest,ytest,ep))
+#' result1 <- example_joint_calc(n=10)
 #' 
 
 
@@ -72,8 +65,8 @@ genxicor = function (xmat, ymat) {
   x1 = rep(0,n)
   y1 = rep(0,n)
   for (i in 1:n) {
-    x1[i] = as.numeric(borelmergeB(xmat[i,]))
-    y1[i] = as.numeric(borelmergeB(ymat[i,]))
+    x1[i] = as.numeric(borelmerge(xmat[i,]))
+    y1[i] = as.numeric(borelmerge(ymat[i,]))
   }
   q = xicor(x1,y1, pvalue = TRUE)
   return(q)

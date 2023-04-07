@@ -7,10 +7,10 @@
 wholebinary(x, nc = 31)
 }
 \arguments{
+\item{x}{is a decimal number}
+
 \item{nc}{is the length of the binary expansion and defines the
 number of columns of the output matrix}
-
-\item{Takes}{in a decimal number x}
 }
 \value{
 This function generates a list with a binary matrix

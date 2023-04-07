@@ -10,24 +10,11 @@ genxicor(xmat, ymat)
 \item{xmat}{Matrix of numeric values in the first argument.}
 
 \item{ymat}{Matrix of numeric values in the second argument.}
-
-\item{pvalue}{Whether or not to return the p-value of rejecting
-independence, if TRUE the function also returns the standard deviation of
-xi.}
-
-\item{method}{If method = "asymptotic" the function returns P-values
-computed by the asymptotic theory. If method = "permutation", a permutation
-test with nperm permutations is employed to estimate the P-value. Usually,
-there is no need for the permutation test. The asymptotic theory is good
-enough.}
-
-\item{nperm}{In the case of a permutation test, \code{nperm} is the number
-of permutations to do.}
 }
 \value{
-In the case pvalue=FALSE, function returns the value of the genxi
-coefficient.
-In the case pvalue=TRUE is chosen, the function returns a list:
+Function returns the value of the genxi coefficient.
+Since by default the option pvalue=TRUE is chosen, the function 
+returns a list:
 \describe{\item{xi}{The
 value of the xi coefficient.}
 \item{sd}{The standard deviation.}
@@ -48,6 +35,8 @@ relevant for xicor can be specified, such as pvalue.
 }
 \note{
 This version does not use a seed as argument, if reproducibility is an issue, set a seed before calling the function.
+
+The p-value of rejecting independence is set to TRUE.
 }
 \examples{
 
@@ -63,9 +52,11 @@ c2 = genxicor(v, p)
 c3 = genxicor(w, p)
 c4 = genxicor(z, p)
 c5 = genxicor(q, p)
-return(list(marg1 = c1$xi, marg2 = c2$xi, marg3 = c3$xi, marg4 = c4$xi, joint = c5$xi, p1 = c1$pval, p2 = c2$pval, p3 = c3$pval, p4 = c4$pval, p5 = c5$pval))
+return(list(marg1 = c1$xi, marg2 = c2$xi, marg3 = c3$xi, 
+marg4 = c4$xi, joint = c5$xi, p1 = c1$pval, p2 = c2$pval, p3 = c3$pval,
+p4 = c4$pval, p5 = c5$pval))
 }
-result1 <- example_joint_calc(10,xtest,ytest,ep))
+result1 <- example_joint_calc(n=10)
 
 }
 \references{

@@ -1,7 +1,7 @@
 #' Auxiliary function that takes avector and produces a single number through 
 #' a Borel isomorphism using the wholebinary and backdec functions.
 
-#' @param x is a vector of real numbers
+#' @param xvec is a vector of real numbers
 #' @return produces a single real number by converting each element
 # of x to binary, interlacing the digits, and reconverting it back to a single
 # real number. (This is the Borel isomorphism.)

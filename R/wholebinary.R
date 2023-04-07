@@ -7,7 +7,7 @@
 #' The sign as appended into the final list object which the function
 #' returns.
 #' 
-#' @param Takes in a decimal number x
+#' @param x is a decimal number 
 #' @param nc is the length of the binary expansion and defines the
 #' number of columns of the output matrix
 #' @return This function generates a list with a binary matrix

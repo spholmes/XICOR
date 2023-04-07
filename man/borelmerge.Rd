@@ -8,7 +8,7 @@ a Borel isomorphism using the wholebinary and backdec functions.}
 borelmerge(xvec)
 }
 \arguments{
-\item{x}{is a vector of real numbers}
+\item{xvec}{is a vector of real numbers}
 }
 \value{
 produces a single real number by converting each element

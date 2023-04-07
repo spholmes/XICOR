@@ -4,7 +4,7 @@
 #' 
 #' @param rmat a matrix with two times m rows corresponding to the 
 #' the expansions of the m numbers to be interleaved.
-#' @param sgn 
+#' @param sgn is the sign vector associated to the numbers to be weaved
 #' 
 weave = function(rmat, sgn) {
   ##weave the two numbers and keep an extra

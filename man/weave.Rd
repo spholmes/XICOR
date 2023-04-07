@@ -12,7 +12,7 @@ weave(rmat, sgn)
 \item{rmat}{a matrix with two times m rows corresponding to the 
 the expansions of the m numbers to be interleaved.}
 
-\item{sgn}{}
+\item{sgn}{is the sign vector associated to the numbers to be weaved}
 }
 \description{
 Take a matrix of two numbers given in their binary expansion
