@@ -6,7 +6,6 @@
 #' @param xvec Vector of numeric values in the first coordinate.
 #' @param yvec Vector of numeric values in the second coordinate.
 #' @param simple Whether auxiliary information is kept to pass on.
-#' @param seed  Ties are removed randomly, setting a seed ensures reproducibility.
 #' @return In the case simple = TRUE, function returns the value of the
 #' xi
 #' coefficient,
@@ -30,13 +29,11 @@
 #' calculateXI(peas$child,peas$parent)
 
 
-calculateXI <- function(xvec, yvec, simple=TRUE, seed = 12133331) {
+calculateXI <- function(xvec, yvec, simple=TRUE) {
 ## The following function computes the new correlation coefficient.
 ## Main simple correlation calculation in the case of two vectors xvec and yvec, no missing.
 ## This will eventually benefit from being written in C for speed.
-## Because of the randomness in breaking up ties, we fix a seed.
-## This can be over-ridden by setting seed = NULL
-  if(! is.null(seed)) { set.seed(seed) }
+## This version does not have a seed that can be fixed.
 # n is the sample size.
   n <- length(xvec)							
 # PI is the rank vector for x, with ties broken at random

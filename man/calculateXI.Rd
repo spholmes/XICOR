@@ -5,7 +5,7 @@
 \alias{xicorcoefficient}
 \title{Compute the cross rank coefficient xi on two vectors.}
 \usage{
-calculateXI(xvec, yvec, simple = TRUE, seed = 12133331)
+calculateXI(xvec, yvec, simple = TRUE)
 }
 \arguments{
 \item{xvec}{Vector of numeric values in the first coordinate.}
@@ -13,8 +13,6 @@ calculateXI(xvec, yvec, simple = TRUE, seed = 12133331)
 \item{yvec}{Vector of numeric values in the second coordinate.}
 
 \item{simple}{Whether auxiliary information is kept to pass on.}
-
-\item{seed}{Ties are removed randomly, setting a seed ensures reproducibility.}
 }
 \value{
 In the case simple = TRUE, function returns the value of the
