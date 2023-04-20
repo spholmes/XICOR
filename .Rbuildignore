@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^\.DS_Store$
+^LICENSE$
+LICENSE
+.DS_Store
+^\.DS_Store
+[.]DS_Store$
+^\.git$
+
