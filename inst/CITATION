@@ -1,12 +1,7 @@
-citHeader("To cite XICOR in publications use:")
-
-citEntry(
-  entry    =  "unpublished",
-  title    =  "A new coefficient of correlation",
-  author   = "Chatterjee, Sourav",
-  year     = "2020",
-  note     = "in press (JASA)",
-  arXiv    =  "https://arxiv.org/pdf/1909.10140.pdf",
-  textVersion = paste(
-  "Chatterjee, Sourav.","A new coefficient of correlation.","arXiv preprint arXiv:1909.10140 (2019)")
+bibentry(,
+  title = "{XICOR}: R package 0.4",
+  author = "Sourav Chatterjee and Susan Holmes",
+  year = 2023,
+  note = { R package version 0.4.1},
+  url={https://CRAN.R-project.org/package=XICOR}
 )
