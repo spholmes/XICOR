@@ -1,7 +1,10 @@
-bibentry(,
-  title = "{XICOR}: R package 0.4",
-  author = "Sourav Chatterjee and Susan Holmes",
-  year = 2023,
-  note = { R package version 0.4.1},
-  url={https://CRAN.R-project.org/package=XICOR}
+bibentry(
+  bibtype  = "Manual",
+  title    = "XICOR: Robust and generalized correlation coefficients",
+  author   = "Sourav Chatterjee and Susan Holmes",
+  year     = 2023,
+  url      = "https://CRAN.R-project.org/package=XICOR",
+  note     = "https://github.com/spholmes/XICOR"
 )
+
+
