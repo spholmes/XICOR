@@ -30,6 +30,7 @@
 #'   \item{method}{The method used for the confidence interval}
 #'   \item{lower}{The lower bound of the confidence interval}
 #'   \item{upper}{The upper bound of the confidence interval}
+#' 
 #'   The confidence level is stored as an attribute "conf".
 #' @author Christoph Dalitz, Juliane Arning, Felix Lögler
 #' @seealso xicor
@@ -56,7 +57,6 @@
 #' 
 #' @examples
 #'
-#'#' set.seed(123)
 #' x <- runif(100, min=-1, max=1)
 #' y <- x^2 + rnorm(100, sd=0.2)
 #' ci <- xicor.ci(x, y)
@@ -102,6 +102,7 @@ xicor.ci <- function(x, y, conf = 0.95, method = "all", R = 2000) {
 
 #' Bootstrap normality method for xicor confidence interval
 #' @keywords internal
+#' @noRd
 #' 
 xicor.ci.boot.norm <- function(x, y, conf = 0.95, R = 2000) {
 
@@ -134,6 +135,7 @@ xicor.ci.boot.norm <- function(x, y, conf = 0.95, R = 2000) {
 
 #' Nonparametric method for xicor confidence interval
 #' @keywords internal
+#' @noRd
 #' 
 xicor.ci.boot.nonpar <- function(x, y, conf = 0.95, R = 2000) {
 
@@ -167,6 +169,8 @@ xicor.ci.boot.nonpar <- function(x, y, conf = 0.95, R = 2000) {
 
 #' Implementation of method "sigma.bar"
 #' @keywords internal
+#' @noRd
+#' 
 xicor.ci.sigma.lh <- function(x, y, conf = 0.95) {
   if (length(x) != length(unique(x)) | length(y) != length(unique(y)))
     warning("method 'sigma.lh' is meant for continuous variables")
